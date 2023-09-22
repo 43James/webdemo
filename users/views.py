@@ -25,6 +25,7 @@ def login_user(request):
     else:
         return render(request, 'login.html')
 
+
 def home(request):
     return render(request, 'home.html')
 
@@ -45,10 +46,10 @@ def add_user(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
-            print("Here1")
+            # print("Here1")
             form.save(commit=False)
             form.save()
-            print("Here")
+            # print("Here")
             messages.success(request, 'ลงทะเบียนสำเร็จ')
             return redirect('/login/')
         else:

@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MIDDLEWARE = [
+    # ...
+    'myapp.middleware.PreventBackwardLoginMiddleware',
+    # ...
+]
 
 # Application definition
 
