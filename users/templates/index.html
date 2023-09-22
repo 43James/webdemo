@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand" href="#!">KI SUGA RGROUP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+
+                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="/profile/" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    style="font-weight: bold; "><i class="fa-solid fa-circle-user"
+                                        style="margin-right: 5px;"></i> {{user.username }}
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark"
+                                    aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="/logout/"><i
+                                                class="fa-solid fa-right-from-bracket" style="margin-right: 10px;"></i>
+                                            LogOut </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Header - set the background image for the header in the line below-->
+    <header class="py-5 bg-image-full " style="background-image: url('https://media.jobthai.com/v1/images/logo-pic-map/173312_pic_20210223100052.jpeg');
+        height: 320px;
+        width: 1404px;">
+    </header>
+    <!-- Content section-->
+    <section class="py-5">
+        {% if messages %}
+        <div class="container messages col-md-4 justify-content-center">
+            {% for message in messages %}
+            {% if 'success' in message.tags %} <ul class="alert alert-success text-center">
+                <h5> {{ message }} </h5>
+            </ul> {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h2>Full Width Backgrounds</h2>
+                    <p class="lead">A single, lightweight helper class allows you to add engaging, full width background
+                        images to sections of your page.</p>
+                    <p class="mb-0">The universe is almost 14 billion years old, and, wow! Life had no problem starting
+                        here on Earth! I think it would be inexcusably egocentric of us to suggest that we're alone in
+                        the universe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Image element - set the background image for the header in the line below-->
+    <div class="py-5 bg-image-full" style="background-image: url('https://media.jobthai.com/v1/images/logo-pic-map/173312_pic_20210223100059.jpeg');
+    background-size: cover; ">
+        <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+        <div style="height: 20rem"></div>
+    </div>
+    <!-- Content section-->
+    <section class="py-5">
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <h2>Engaging Background Images</h2>
+                    <p class="lead">The background images used in this template are sourced from Unsplash and are open
+                        source and free to use.</p>
+                    <p class="mb-0">I can't tell you how many people say they were turned off from science because of a
+                        science teacher that completely sucked out all the inspiration and enthusiasm they had for the
+                        course.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-3 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+<script type="text/javascript">
+
+    // รอเวลา 3 วินาทีแล้วหลังจากนั้นปิด alert ด้วย setTimeout
+    setTimeout(function () {
+        // ปิด alert
+        document.querySelector(".alert").style.display = "none";
+    }, 3000); // 3 วินาที
+
+</script>
+
+</html>
