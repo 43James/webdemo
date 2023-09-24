@@ -29,38 +29,31 @@
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-
-                    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="/profile/" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    style="font-weight: bold; "><i class="fa-solid fa-circle-user"
-                                        style="margin-right: 5px;"></i> {{user.username }}
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark"
-                                    aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="/logout/"><i
-                                                class="fa-solid fa-right-from-bracket" style="margin-right: 10px;"></i>
-                                            LogOut </a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="/profile/" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="font-weight: bold; "><i class="fa-solid fa-circle-user"
+                                style="margin-right: 5px;"></i> {{user.username }}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <a class="dropdown-item" href="/logout/"><i class="fa-solid fa-right-from-bracket"
+                                style="margin-right: 10px;"></i> LogOut</a>
+                        </div>
+                    </li>
                 </ul>
-
             </div>
         </div>
     </nav>
     <br><br>
+    <img src="https://media.jobthai.com/v1/images/logo-pic-map/173312_pic_20210223100052.jpeg" class="img-fluid"
+        id="home" alt="...">
     <!-- Header - set the background image for the header in the line below-->
-    <header id="home" class="py-5 bg-image-full" style="background-image: url('https://media.jobthai.com/v1/images/logo-pic-map/173312_pic_20210223100052.jpeg');
+    <!-- <header id="home" class="py-5 img-fluid" style="background-image: url('https://media.jobthai.com/v1/images/logo-pic-map/173312_pic_20210223100052.jpeg');
         height: 320px;
         width: 1404px;">
-    </header>
+    </header> -->
     <!-- Content section-->
-    <section class="py-5"id="about">
+    <section class="py-5" id="about">
         {% if messages %}
         <div class="container messages col-md-4 justify-content-center">
             {% for message in messages %}
@@ -70,39 +63,58 @@
             {% endfor %}
         </div>
         {% endif %}
-        <div class="container my-5" >
+        <div class="container my-5">
             <div class="row justify-content-center">
-                <div class="col-lg-6" >
+                <div class="col-lg-6">
                     <h2>บริษัท น้ำตาลสุรินทร์ จำกัด</h2>
-                    <p class="lead">กลุ่มเคไอ ก่อตั้งโดยตระกูล เสถียรถิระกุล ถือกำเนิดขึ้นในอุตสาหกรรมน้ำตาลในปีพ.ศ.2508 โดยได้ก่อตั้งโรงงานน้ำตาล
+                    <p class="lead">กลุ่มเคไอ ก่อตั้งโดยตระกูล เสถียรถิระกุล ถือกำเนิดขึ้นในอุตสาหกรรมน้ำตาลในปีพ.ศ.2508
+                        โดยได้ก่อตั้งโรงงานน้ำตาล
                         แห่งแรกของกลุ่มขึ้นที่จังหวัดชลบุรี</p>
-                    <p class="mb-0">ต่อมาในปี พ.ศ.2533 ทางกลุ่มได้ย้ายฐานการผลิตจากจังหวัดชลบุรีมาที่อำเภอพิมาย จังหวัดนครราชสีมาและในปี พ.ศ.
-                        2546 บริษัท น้ำตาลสุรินทร์ จำกัด โรงงานน้ำตาลแห่งที่สองของกลุ่มก็ได้ถูกก่อตั้งขึ้นที่ อำเภอปราสาท จังหวัดสุรินทร์
-                        
-                        กว่า 40 ปีของการทำธุรกิจด้วยความมุ่งมั่นในการปรับปรุงพัฒนาระบบบริหารงานคุณภาพอย่างต่อเนื่อง จึงทำให้บริษัทได้รับการรับรองระบบมาตรฐานคุณภาพระบบ ISO9000:2000 มาตรฐานด้านสิ่งแวดล้อมระบบ ISO14001:2004 GMP HALAL และ มอก.18001 นอกจากนั้นบริษัทได้เล็งเห็นความสำคัญในระบบการจัดการด้านการเกษตร เพื่อให้ได้ผลผลิตอ้อยที่ดีเข้าสู่โรงงาน โดยมุ่งเน้นการพัฒนาคุณภาพอ้อย คุณภาพของเกษตรกร ตลอดจนคุณภาพของเทคโนโลยีเครื่องมือ อุปกรณ์ในการทำไร่อ้อย เพื่อให้ได้วัตถุดิบที่มีคุณภาพ ก่อนจะนำมาผ่านกระบวนการผลิตด้วยเครื่องจักรและเทคโนโลยีที่ทันสมัย จนได้น้ำตาลทรายคุณภาพดีได้มาตรฐาน ตรงตามความต้องการของลูกค้า
-                        
+                    <p class="mb-0">ต่อมาในปี พ.ศ.2533 ทางกลุ่มได้ย้ายฐานการผลิตจากจังหวัดชลบุรีมาที่อำเภอพิมาย
+                        จังหวัดนครราชสีมาและในปี พ.ศ.
+                        2546 บริษัท น้ำตาลสุรินทร์ จำกัด โรงงานน้ำตาลแห่งที่สองของกลุ่มก็ได้ถูกก่อตั้งขึ้นที่
+                        อำเภอปราสาท จังหวัดสุรินทร์
+
+                        กว่า 40 ปีของการทำธุรกิจด้วยความมุ่งมั่นในการปรับปรุงพัฒนาระบบบริหารงานคุณภาพอย่างต่อเนื่อง
+                        จึงทำให้บริษัทได้รับการรับรองระบบมาตรฐานคุณภาพระบบ ISO9000:2000 มาตรฐานด้านสิ่งแวดล้อมระบบ
+                        ISO14001:2004 GMP HALAL และ มอก.18001
+                        นอกจากนั้นบริษัทได้เล็งเห็นความสำคัญในระบบการจัดการด้านการเกษตร
+                        เพื่อให้ได้ผลผลิตอ้อยที่ดีเข้าสู่โรงงาน โดยมุ่งเน้นการพัฒนาคุณภาพอ้อย คุณภาพของเกษตรกร
+                        ตลอดจนคุณภาพของเทคโนโลยีเครื่องมือ อุปกรณ์ในการทำไร่อ้อย เพื่อให้ได้วัตถุดิบที่มีคุณภาพ
+                        ก่อนจะนำมาผ่านกระบวนการผลิตด้วยเครื่องจักรและเทคโนโลยีที่ทันสมัย
+                        จนได้น้ำตาลทรายคุณภาพดีได้มาตรฐาน ตรงตามความต้องการของลูกค้า
+
                         ปัจจุบัน กลุ่มเคไอ มีบริษัทในเครือแยกเป็นสามพื้นที่มี ทั้งหมด 5 บริษัท คือ
-                        
-                        1.บริษัท อุตสาหกรรมโคราช จำกัดก่อตั้งขึ้นเมื่อวันที่ 13 ธันวาคม พ.ศ. 2533 ด้วยทุนจดทะเบียน 700 ล้านบาท
-                        บนเนื้อที่ 2,500 ไร่ ของ ตำบลหนองระเวียง อำเภอพิมาย จังหวัดนครราชสีมา เพื่อดำเนินธุรกิจผลิตและจำหน่ายน้ำตาลทราย
-                        ด้วยกำลังการผลิตกว่า 28,000 ตันอ้อยต่อวัน พร้อมทั้งมีปริษัทในเครือ บ.ผลิตไฟฟ้าจากพลังงานชีวมวลโดยใช้กากอ้อย เพื่อนำมาใช้ มีกำลังการผลิตไฟฟ้ารวม 42 เมกกะวัตต์
+
+                        1.บริษัท อุตสาหกรรมโคราช จำกัดก่อตั้งขึ้นเมื่อวันที่ 13 ธันวาคม พ.ศ. 2533 ด้วยทุนจดทะเบียน 700
+                        ล้านบาท
+                        บนเนื้อที่ 2,500 ไร่ ของ ตำบลหนองระเวียง อำเภอพิมาย จังหวัดนครราชสีมา
+                        เพื่อดำเนินธุรกิจผลิตและจำหน่ายน้ำตาลทราย
+                        ด้วยกำลังการผลิตกว่า 28,000 ตันอ้อยต่อวัน พร้อมทั้งมีปริษัทในเครือ
+                        บ.ผลิตไฟฟ้าจากพลังงานชีวมวลโดยใช้กากอ้อย เพื่อนำมาใช้ มีกำลังการผลิตไฟฟ้ารวม 42 เมกกะวัตต์
                         ต่อชั่วโมง และอีกสองบริษัท ไอโอแก๊ซ และโรงปุ๋ย
-                        
-                        2.บริษัท น้ำตาลสุรินทร์ จำกัด ก่อตั้งขึ้นเมื่อวันที่ 24 ตุลาคม พ.ศ. 2546 ด้วยทุนจดทะเบียน 950 ล้านบาท บนเนื้อที่ 1,000 ไร่ ของ ตำบลปรือ อำเภอปราสาท จังหวัดสุรินทร์ เพื่อดำเนินธุรกิจผลิตและจำหน่ายน้ำตาลทราย ด้วยกำลังการผลิตกว่า 18,000 ตันอ้อยต่อวัน
-                        
-                        3.บริษัท ไฟฟ้าสุรินทร์ จำกัด ก่อตั้งขึ้นเมื่อวันที่ 4 กรกฎาคม พ.ศ. 2548 ด้วยทุนจดทะเบียน 995 ล้านบาท โดยตั้ง
-                        อยู่ในบริเวณพื้นที่เดียวกับ บริษัท น้ำตาลสุรินทร์ จำกัด เพื่อดำเนินธุรกิจผลิตและจำหน่ายไฟฟ้า จากพลังงานชีวมวล
+
+                        2.บริษัท น้ำตาลสุรินทร์ จำกัด ก่อตั้งขึ้นเมื่อวันที่ 24 ตุลาคม พ.ศ. 2546 ด้วยทุนจดทะเบียน 950
+                        ล้านบาท บนเนื้อที่ 1,000 ไร่ ของ ตำบลปรือ อำเภอปราสาท จังหวัดสุรินทร์
+                        เพื่อดำเนินธุรกิจผลิตและจำหน่ายน้ำตาลทราย ด้วยกำลังการผลิตกว่า 18,000 ตันอ้อยต่อวัน
+
+                        3.บริษัท ไฟฟ้าสุรินทร์ จำกัด ก่อตั้งขึ้นเมื่อวันที่ 4 กรกฎาคม พ.ศ. 2548 ด้วยทุนจดทะเบียน 995
+                        ล้านบาท โดยตั้ง
+                        อยู่ในบริเวณพื้นที่เดียวกับ บริษัท น้ำตาลสุรินทร์ จำกัด เพื่อดำเนินธุรกิจผลิตและจำหน่ายไฟฟ้า
+                        จากพลังงานชีวมวล
                     </p>
                 </div>
             </div>
         </div>
     </section>
     <!-- Image element - set the background image for the header in the line below-->
-    <div class="py-5 bg-image-full" style="background-image: url('https://media.jobthai.com/v1/images/logo-pic-map/173312_pic_20210223100059.jpeg');
-    background-size: cover; ">
-        <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
-        <div style="height: 20rem"></div>
-    </div>
+    <img src="https://media.jobthai.com/v1/images/logo-pic-map/173312_pic_20210223100059.jpeg" class="img-fluid"
+        alt="...">
+    <!-- <div class="py-5 bg-image-full" style="background-image: url('https://media.jobthai.com/v1/images/logo-pic-map/173312_pic_20210223100059.jpeg');
+    background-size: cover; "> -->
+    <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+    <!-- <div style="height: 20rem"></div>
+    </div> -->
     <!-- Content section-->
     <section class="py-5" id="contact">
         <div class="container my-5">
